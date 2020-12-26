@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>1</title>
+  </head>
+  <body>
+    <p><h1>Please Check Console Log</h1></p>
+    <p><h3>Klik Kanan => Inspect Element => Console</h3></p>
+    <script>
+      var nama = "Andi";
+      var gaji = 1500000;
+      var tunjangan = 500000;
+
+      function BPJS(){
+        var hasil;
+        hasil = 3 * gaji / 100;
+
+        return hasil;
+      }
+
+      function Pajak(){
+        var hasil;
+        hasil = 5 * gaji / 100;
+
+        return hasil;
+      }
+
+      function gajiBersih(){
+        var hasil;
+        hasil = gaji + tunjangan - BPJS() - Pajak();
+
+        return hasil;
+      }
+
+      function totalGaji(){
+        var hasil;
+        hasil = gajiBersih() * 2;
+
+        return hasil;
+      }
+console.log('Nama Karyawan' + ' : ' + nama);
+console.log('Gaji Pokok' + ' : ' + gaji);
+console.log('Tunjangan' + ' : ' + tunjangan);
+console.log('BPJS' + ' : ' + BPJS());
+console.log('Pajak' + ' : ' + Pajak());
+console.log('Gaji Bersih' + ' : ' + gajiBersih() + ' /Bulan');
+console.log('Total Gaji' + ' : ' + totalGaji());
+
+    </script>
+  </body>
+</html>
